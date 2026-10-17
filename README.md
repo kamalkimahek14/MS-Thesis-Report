@@ -124,3 +124,7 @@ MS-Thesis-Report/
 GitHub shows a *Cite this repository* button built from [`CITATION.cff`](CITATION.cff).
 
 Kamal Mehta. *Object Classification, Detection and State Estimation using YOLO v3 Deep Neural Network and Sensor Fusion of Stereo Camera and LiDAR*. Master's thesis, The University of Texas at Arlington, 2021.
+
+## License
+
+[CC BY-NC-ND 4.0](LICENSE): you may read, share and cite this work with credit; no commercial use and no modified versions.

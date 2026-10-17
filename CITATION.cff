@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use or refer to this work, please cite the thesis below."
 type: software
+license: CC-BY-NC-ND-4.0
 title: "MS thesis report (LaTeX source): Object Classification, Detection and State Estimation using YOLO v3 and Camera-LiDAR Sensor Fusion"
 authors:
   - family-names: Mehta
