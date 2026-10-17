@@ -4,9 +4,11 @@
 
 A wheeled robot detects objects in real time with a YOLO-v3 deep neural network and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. The thesis covers the full path from building a labeled dataset and training the detector, through calibrating both sensors, to running detection and fusion live on the robot.
 
-[Defense slides (LaTeX Beamer)](https://github.com/kamalkimahek14/MS-Thesis-Presentation) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com) · [Compiled PDF (Releases)](https://github.com/kamalkimahek14/MS-Thesis-Report/releases)
+[Defense slides (LaTeX Beamer)](https://github.com/kamalkimahek14/MS-Thesis-Presentation) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com) · [Thesis PDF](MS-Thesis-Report.pdf)
 
 *Thesis title: Object Classification, Detection and State Estimation using YOLO v3 Deep Neural Network and Sensor Fusion of Stereo Camera and LiDAR. Defended June 1, 2021; supervised by Dr. Kamesh Subbarao, Aerospace System Laboratory.*
+
+### [Read the thesis (PDF)](MS-Thesis-Report.pdf)
 
 ## The problem
 
