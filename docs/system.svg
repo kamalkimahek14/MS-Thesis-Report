@@ -52,7 +52,7 @@
   <text x="524" y="250" class="b">Compute</text>
   <text x="524" y="270" class="l">Intel NUC onboard the rover</text>
   <text x="524" y="287" class="l">runs on NVIDIA GTX 1050 GPU</text>
-  <text x="524" y="304" class="l">1.44 s per frame (CPU ≈ 8 s)</text>
+  <text x="524" y="304" class="l">GPU-accelerated pipeline</text>
   <rect x="748" y="226" width="184" height="94" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="764" y="250" class="b">Per-object output</text>
   <text x="764" y="270" class="l">class + confidence</text>
