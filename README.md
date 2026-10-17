@@ -6,7 +6,7 @@ A wheeled robot detects objects in real time with a YOLO-v3 deep neural network 
 
 [Defense slides (LaTeX Beamer)](https://github.com/kamalkimahek14/MS-Thesis-Presentation) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com) · [Thesis PDF](MS-Thesis-Report.pdf)
 
-*Thesis title: Object Classification, Detection and State Estimation using YOLO v3 Deep Neural Network and Sensor Fusion of Stereo Camera and LiDAR. Defended June 1, 2021; supervised by Dr. Kamesh Subbarao, Aerospace System Laboratory.*
+*Thesis title: Object Classification, Detection and State Estimation using YOLO v3 Deep Neural Network and Sensor Fusion of Stereo Camera and LiDAR. Defended June 1, 2021; supervised by Dr. Kamesh Subbarao, Aerospace Systems Laboratory.*
 
 ### [Read the thesis (PDF)](MS-Thesis-Report.pdf)
 
