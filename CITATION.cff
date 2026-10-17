@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use or refer to this work, please cite the thesis below."
+type: software
+title: "MS thesis report (LaTeX source): Object Classification, Detection and State Estimation using YOLO v3 and Camera-LiDAR Sensor Fusion"
+authors:
+  - family-names: Mehta
+    given-names: Kamal
+repository-code: "https://github.com/kamalkimahek14/MS-Thesis-Report"
+url: "https://kamal-mehta.com"
+keywords:
+  - object detection
+  - YOLO-v3
+  - sensor fusion
+  - LiDAR
+  - stereo camera
+  - Kalman filter
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Object Classification, Detection and State Estimation using YOLO v3 Deep Neural Network and Sensor Fusion of Stereo Camera and LiDAR"
+  authors:
+    - family-names: Mehta
+      given-names: Kamal
+  institution:
+    name: "The University of Texas at Arlington"
+  department: "Mechanical and Aerospace Engineering"
+  year: 2021
+  month: 8

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Camera-LiDAR detection and fusion pipeline</title>
+  <desc id="d">Stereo images go through YOLO-v3 to 2D boxes and are triangulated; the left-camera boxes also project into the LiDAR point cloud as 3D frustums that are clustered into 3D boxes. Both position streams enter a centralized linear Kalman filter that estimates position, velocity and acceleration.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker>
+    <style>
+      text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e2e8f0}
+      .h{font-size:20px;font-weight:600}
+      .s{font-size:13px;fill:#94a3b8}
+      .b{font-size:14px;font-weight:600}
+      .l{font-size:12px;fill:#cbd5e1}
+      .ln{stroke:#94a3b8;stroke-width:1.8;fill:none;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="960" height="400" rx="16" fill="#0f172a"/>
+  <text x="28" y="40" class="h">Method pipeline</text>
+  <text x="28" y="62" class="s">Real-time object detection and state estimation, camera + LiDAR (MATLAB 2020b)</text>
+
+  <!-- sensors -->
+  <g>
+    <rect x="28" y="96" width="140" height="56" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="98" y="120" class="b" text-anchor="middle">LiDAR</text>
+    <text x="98" y="139" class="l" text-anchor="middle">RealSense L515</text>
+    <rect x="28" y="196" width="140" height="56" rx="10" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="98" y="220" class="b" text-anchor="middle">Left camera</text>
+    <text x="98" y="239" class="l" text-anchor="middle">Sony IMX179</text>
+    <rect x="28" y="296" width="140" height="56" rx="10" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="98" y="320" class="b" text-anchor="middle">Right camera</text>
+    <text x="98" y="339" class="l" text-anchor="middle">Sony IMX179</text>
+  </g>
+
+  <!-- camera branch -->
+  <rect x="230" y="196" width="150" height="56" rx="10" fill="#164e63"/>
+  <text x="305" y="220" class="b" text-anchor="middle">YOLO-v3</text>
+  <text x="305" y="239" class="l" text-anchor="middle">2D bounding boxes</text>
+  <rect x="230" y="296" width="150" height="56" rx="10" fill="#164e63"/>
+  <text x="305" y="320" class="b" text-anchor="middle">YOLO-v3</text>
+  <text x="305" y="339" class="l" text-anchor="middle">2D bounding boxes</text>
+  <path class="ln" d="M168 224H228"/>
+  <path class="ln" d="M168 324H228"/>
+
+  <rect x="440" y="246" width="160" height="56" rx="10" fill="#164e63"/>
+  <text x="520" y="270" class="b" text-anchor="middle">Triangulation</text>
+  <text x="520" y="289" class="l" text-anchor="middle">position, camera frame</text>
+  <path class="ln" d="M380 224C410 224 410 266 438 266"/>
+  <path class="ln" d="M380 324C410 324 410 284 438 284"/>
+
+  <!-- lidar branch -->
+  <rect x="230" y="96" width="150" height="56" rx="10" fill="#3b0764"/>
+  <text x="305" y="120" class="b" text-anchor="middle">3D frustum</text>
+  <text x="305" y="139" class="l" text-anchor="middle">proposal</text>
+  <path class="ln" d="M168 124H228"/>
+  <path class="ln" d="M305 196V154"/>
+  <text x="313" y="180" class="l">camera → LiDAR transform</text>
+
+  <rect x="440" y="96" width="160" height="56" rx="10" fill="#3b0764"/>
+  <text x="520" y="120" class="b" text-anchor="middle">Clustering</text>
+  <text x="520" y="139" class="l" text-anchor="middle">3D bounding boxes</text>
+  <path class="ln" d="M380 124H438"/>
+
+  <!-- fusion -->
+  <rect x="660" y="166" width="150" height="76" rx="10" fill="#14532d" stroke="#34d399" stroke-width="1.5"/>
+  <text x="735" y="194" class="b" text-anchor="middle">Centralized fusion</text>
+  <text x="735" y="213" class="l" text-anchor="middle">linear Kalman filter</text>
+  <text x="735" y="230" class="l" text-anchor="middle">constant acceleration</text>
+  <path class="ln" d="M600 124C632 124 632 188 658 188"/>
+  <path class="ln" d="M600 274C632 274 632 222 658 222"/>
+
+  <rect x="836" y="166" width="104" height="76" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="888" y="192" class="b" text-anchor="middle">Object</text>
+  <text x="888" y="210" class="b" text-anchor="middle">states</text>
+  <text x="888" y="229" class="l" text-anchor="middle">p · v · a</text>
+  <path class="ln" d="M810 204H834"/>
+</svg>

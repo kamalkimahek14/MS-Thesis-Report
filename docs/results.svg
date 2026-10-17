@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" width="960" height="330" role="img" aria-labelledby="t d">
+  <title id="t">Key results from the thesis</title>
+  <desc id="d">Detection: training accuracy 99.08 percent, testing accuracy 96.25 percent, 201 of 220 test images detected correctly, mean IoU 0.8157. Simulated fusion, overall position error: camera 0.97 m, LiDAR 0.29 m, fused estimate 0.42 m, a 56 percent improvement over the camera.</desc>
+  <style>
+    text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e2e8f0}
+    .h{font-size:20px;font-weight:600}
+    .p{font-size:15px;font-weight:600}
+    .s{font-size:12px;fill:#94a3b8}
+    .l{font-size:13px;fill:#cbd5e1}
+    .v{font-size:13px;font-weight:600}
+    .g{stroke:#334155;stroke-width:1}
+  </style>
+  <rect width="960" height="330" rx="16" fill="#0f172a"/>
+  <text x="28" y="40" class="h">Key results</text>
+
+  <!-- detection panel -->
+  <text x="28" y="80" class="p">YOLO-v3 detection</text>
+  <text x="28" y="99" class="s">scale 0–100%; mean IoU shown ×100</text>
+  <line x1="200" y1="112" x2="200" y2="290" class="g"/>
+  <line x1="440" y1="112" x2="440" y2="290" class="g" stroke-dasharray="3 4"/>
+  <text x="440" y="306" class="s" text-anchor="middle">100%</text>
+  <text x="188" y="138" class="l" text-anchor="end">Training accuracy</text>
+  <rect x="200" y="124" width="237.8" height="22" rx="4" fill="#22d3ee"/>
+  <text x="446" y="140" class="v">99.08%</text>
+  <text x="188" y="180" class="l" text-anchor="end">Testing accuracy</text>
+  <rect x="200" y="166" width="231" height="22" rx="4" fill="#22d3ee"/>
+  <text x="446" y="182" class="v">96.25%</text>
+  <text x="188" y="222" class="l" text-anchor="end">Correct test images</text>
+  <rect x="200" y="208" width="219.4" height="22" rx="4" fill="#a78bfa"/>
+  <text x="446" y="224" class="v">201 / 220</text>
+  <text x="188" y="264" class="l" text-anchor="end">Mean IoU</text>
+  <rect x="200" y="250" width="195.8" height="22" rx="4" fill="#a78bfa"/>
+  <text x="446" y="266" class="v">0.8157</text>
+
+  <!-- fusion panel -->
+  <text x="560" y="80" class="p">Camera–LiDAR fusion (simulation)</text>
+  <text x="560" y="99" class="s">overall position error, metres (lower is better)</text>
+  <line x1="680" y1="112" x2="680" y2="248" class="g"/>
+  <line x1="880" y1="112" x2="880" y2="248" class="g" stroke-dasharray="3 4"/>
+  <text x="880" y="264" class="s" text-anchor="middle">1.0 m</text>
+  <text x="668" y="138" class="l" text-anchor="end">Camera only</text>
+  <rect x="680" y="124" width="194" height="22" rx="4" fill="#64748b"/>
+  <text x="886" y="140" class="v">0.97</text>
+  <text x="668" y="180" class="l" text-anchor="end">LiDAR only</text>
+  <rect x="680" y="166" width="58" height="22" rx="4" fill="#64748b"/>
+  <text x="744" y="182" class="v">0.29</text>
+  <text x="668" y="222" class="l" text-anchor="end">Fused estimate</text>
+  <rect x="680" y="208" width="84" height="22" rx="4" fill="#34d399"/>
+  <text x="770" y="224" class="v">0.42</text>
+  <text x="560" y="290" class="l">56% lower error than the camera alone, plus velocity and</text>
+  <text x="560" y="308" class="l">acceleration estimates that neither sensor measures directly.</text>
+</svg>
