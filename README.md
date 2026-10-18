@@ -2,7 +2,7 @@
 
 **LaTeX source of my Master's thesis in Aerospace Engineering, The University of Texas at Arlington (2021).**
 
-A wheeled robot detects objects with a YOLO-v3 deep neural network, live on the robot (about 1.44 s a frame for detection and position estimation on a GTX 1050; 59 ms average detection time per image in the offline test batch) and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. The thesis covers the full path from building a labeled dataset and training the detector, through calibrating both sensors, to running detection and fusion live on the robot.
+A wheeled robot detects objects with a YOLO-v3 deep neural network (about 1.44 s a frame live on a GTX 1050 for detection and position estimation; 59 ms average detection time per image offline) and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. The thesis covers the full path from building a labeled dataset and training the detector, through calibrating both sensors, to running detection and fusion live on the robot.
 
 [Defense slides (LaTeX Beamer)](https://github.com/kamalkimahek14/MS-Thesis-Presentation) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com) · [Thesis PDF](MS-Thesis-Report.pdf)
 
