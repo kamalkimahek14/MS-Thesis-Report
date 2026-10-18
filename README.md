@@ -1,8 +1,8 @@
-# Real-time Object Detection and State Estimation with YOLO-v3 and Camera–LiDAR Fusion
+# Object Detection and State Estimation with YOLO-v3 and Camera–LiDAR Fusion
 
 **LaTeX source of my Master's thesis in Aerospace Engineering, The University of Texas at Arlington (2021).**
 
-A wheeled robot detects objects in real time with a YOLO-v3 deep neural network and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. The thesis covers the full path from building a labeled dataset and training the detector, through calibrating both sensors, to running detection and fusion live on the robot.
+A wheeled robot detects objects with a YOLO-v3 deep neural network, live on the robot (about 1.44 s a frame for detection and position estimation on a GTX 1050; 59 ms average detection time per image in the offline test batch) and estimates each object's position, velocity and acceleration by fusing a stereo camera with a LiDAR through a Kalman filter. The thesis covers the full path from building a labeled dataset and training the detector, through calibrating both sensors, to running detection and fusion live on the robot.
 
 [Defense slides (LaTeX Beamer)](https://github.com/kamalkimahek14/MS-Thesis-Presentation) · [Portfolio: kamal-mehta.com](https://kamal-mehta.com) · [Thesis PDF](MS-Thesis-Report.pdf)
 
@@ -12,7 +12,7 @@ A wheeled robot detects objects in real time with a YOLO-v3 deep neural network 
 
 ## The problem
 
-A ground robot that avoids collisions has to know **what** is in front of it and **where** it is, many times per second, on a small onboard computer. Region-based detectors such as R-CNN are accurate but too slow for that budget. A camera alone sees classes well but judges distance poorly; a LiDAR measures distance well but sees no color or texture. This work pairs a fast single-shot detector with fusion of both sensors to get accurate, real-time object states, including velocity and acceleration that neither sensor measures directly.
+A ground robot that avoids collisions has to know **what** is in front of it and **where** it is, on a small onboard computer. Region-based detectors such as R-CNN are accurate but too slow for that budget. A camera alone sees classes well but judges distance poorly; a LiDAR measures distance well but sees no color or texture. This work pairs a fast single-shot detector with fusion of both sensors to estimate object states, including velocity and acceleration that neither sensor measures directly. In simulation, fusion cut position error to 0.42 m from 0.97 m with the camera alone (LiDAR alone: 0.29 m); fusion adds the class to the position.
 
 ## Approach
 
@@ -59,7 +59,7 @@ All numbers come from the thesis (Chapters 2 and 7).
 </details>
 
 <p align="center">
-  <img src="docs/realtime-detection.png" alt="Real-time detections with class, confidence and estimated distance" width="420">
+  <img src="docs/realtime-detection.png" alt="Live detections with class, confidence and estimated distance" width="420">
   <img src="docs/robot-platform.png" alt="Wheeled robot with stereo camera, RealSense L515 LiDAR and Intel NUC" width="380">
 </p>
 <p align="center"><sub>Left: live detections labelled with class, confidence and estimated distance. Right: the test robot with the stereo camera, LiDAR and onboard Intel NUC.</sub></p>
@@ -71,7 +71,7 @@ All numbers come from the thesis (Chapters 2 and 7).
 - Evaluation of the trained detector on a held-out test set.
 - Intrinsic and extrinsic calibration of the stereo camera and LiDAR: measurement errors, covariances and the rigid transform between the two sensor frames.
 - 3D LiDAR boxes derived from the camera labels, so no second neural network is needed for the point cloud.
-- A Kalman-filter sensor-fusion framework, tested in simulation and then run in real time on hardware.
+- A Kalman-filter sensor-fusion framework, tested in simulation and then run live on hardware (about 1.44 s a frame on a GTX 1050).
 - Everything built in MATLAB 2020b (Deep Learning, Computer Vision, Image Processing, LiDAR, and Sensor Fusion and Tracking toolboxes).
 
 ## How to build
