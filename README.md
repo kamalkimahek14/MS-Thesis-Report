@@ -32,7 +32,8 @@ All numbers come from the thesis (Chapters 2 and 7).
 
 | Result | Value |
 |---|---|
-| Training accuracy · test mAP@0.5, 4 classes (the thesis table lists both as accuracy; test = a random 2% frame-level split of the same recordings) | 99.08% · 96.25% |
+| Test mAP@0.5, 4 classes (random 2% frame-level test split of the same recordings; per-class AP: pyramid 1.00, cylinder 0.97, box 0.97, traffic cone 0.91) | 96.25% |
+| Training accuracy, as reported in the thesis | 99.08% |
 | Test images detected correctly | 201 of 220, with no confusion between classes |
 | Mean IoU on the test set | 0.8157 |
 | Average detection time (offline test batch, detector only) | 59 ms per image |
@@ -70,7 +71,7 @@ All numbers come from the thesis (Chapters 2 and 7).
 
 - Transfer learning of YOLO-v3 with SGDM on a custom labeled dataset, including anchor-box estimation.
 - Iterative hyper-parameter tuning (L2 regularization, learning rate, mini-batch size, epochs, momentum).
-- Evaluation of the trained detector on a held-out test set.
+- Evaluation of the trained detector on a random 2% frame-level test split of the same recordings.
 - Intrinsic and extrinsic calibration of the stereo camera and LiDAR: measurement errors, covariances and the rigid transform between the two sensor frames.
 - 3D LiDAR boxes derived from the camera labels, so no second neural network is needed for the point cloud.
 - A Kalman-filter sensor-fusion framework, tested in simulation and then run live on hardware (about 1.44 s a frame on a GTX 1050).

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" width="960" height="330" role="img" aria-labelledby="t d">
   <title id="t">Key results from the thesis</title>
-  <desc id="d">Detection: training accuracy 99.08 percent, testing accuracy 96.25 percent, 201 of 220 test images detected correctly, mean IoU 0.8157. Simulated fusion, overall position error: camera 0.97 m, LiDAR 0.29 m, fused estimate 0.42 m, a 56 percent improvement over the camera.</desc>
+  <desc id="d">Detection: training accuracy 99.08 percent, test mAP@0.5 96.25 percent (random 2 percent frame-level test split of the same recordings), 201 of 220 test images detected correctly, mean IoU 0.8157. Simulated fusion, overall position error: camera 0.97 m, LiDAR 0.29 m, fused estimate 0.42 m, a 56 percent improvement over the camera.</desc>
   <style>
     text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e2e8f0}
     .h{font-size:20px;font-weight:600}
@@ -22,7 +22,7 @@
   <text x="188" y="138" class="l" text-anchor="end">Training accuracy</text>
   <rect x="200" y="124" width="237.8" height="22" rx="4" fill="#22d3ee"/>
   <text x="446" y="140" class="v">99.08%</text>
-  <text x="188" y="180" class="l" text-anchor="end">Testing accuracy</text>
+  <text x="188" y="180" class="l" text-anchor="end">Test mAP@0.5</text>
   <rect x="200" y="166" width="231" height="22" rx="4" fill="#22d3ee"/>
   <text x="446" y="182" class="v">96.25%</text>
   <text x="188" y="222" class="l" text-anchor="end">Correct test images</text>

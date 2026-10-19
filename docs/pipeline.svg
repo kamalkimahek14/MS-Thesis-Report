@@ -14,7 +14,7 @@
   </defs>
   <rect width="960" height="400" rx="16" fill="#0f172a"/>
   <text x="28" y="40" class="h">Method pipeline</text>
-  <text x="28" y="62" class="s">Real-time object detection and state estimation, camera + LiDAR (MATLAB 2020b)</text>
+  <text x="28" y="62" class="s">Live object detection and state estimation, camera + LiDAR (MATLAB 2020b)</text>
 
   <!-- sensors -->
   <g>
